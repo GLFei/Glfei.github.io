@@ -1,0 +1,12 @@
+name: 创建发布分支
+
+on:
+  push:
+    tags:
+      - "版本*"
+
+jobs:
+  build:
+    name: 创建生产分支
+    steps:
+      - name: 检验代码
